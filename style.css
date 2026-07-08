@@ -459,3 +459,26 @@ section h2{
 }
 
 }
+.whatsapp-btn{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 30px;
+    bottom: 100px;      /* Move it above the taskbar */
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 34px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    z-index: 9999;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover{
+    transform: scale(1.1);
+    background: #1ebe5d;
+}
