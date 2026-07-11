@@ -165,9 +165,13 @@ galleryImages.forEach(img => {
 // Back To Top Button
 // ===============================
 
+// ===============================
+// Back To Top Button
+// ===============================
+
 const topBtn = document.createElement("button");
 
-topBtn.innerHTML = "↑";
+topBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 
 topBtn.id = "topBtn";
 
@@ -175,28 +179,25 @@ document.body.appendChild(topBtn);
 
 topBtn.style.position = "fixed";
 topBtn.style.right = "20px";
-topBtn.style.bottom = "20px";
-topBtn.style.width = "50px";
-topBtn.style.height = "50px";
+topBtn.style.bottom = "95px";   // Above WhatsApp
+topBtn.style.width = "55px";
+topBtn.style.height = "55px";
 topBtn.style.border = "none";
 topBtn.style.borderRadius = "50%";
-topBtn.style.background = "#d40000";
+topBtn.style.background = "#16a34a";
 topBtn.style.color = "#fff";
-topBtn.style.fontSize = "24px";
+topBtn.style.fontSize = "20px";
 topBtn.style.cursor = "pointer";
 topBtn.style.display = "none";
-topBtn.style.zIndex = "999";
+topBtn.style.boxShadow = "0 5px 15px rgba(0,0,0,.3)";
+topBtn.style.zIndex = "9998";
 
 window.addEventListener("scroll", () => {
 
     if(window.scrollY > 300){
-
         topBtn.style.display = "block";
-
     }else{
-
         topBtn.style.display = "none";
-
     }
 
 });
@@ -204,11 +205,8 @@ window.addEventListener("scroll", () => {
 topBtn.addEventListener("click", () => {
 
     window.scrollTo({
-
         top:0,
-
         behavior:"smooth"
-
     });
 
 });
