@@ -1,37 +1,94 @@
+// ===========================================
+// MN PhysioCare Clinic - main.js
+// ===========================================
+
+
 // ===============================
-// Sticky Header
+// Mobile Menu Toggle
 // ===============================
 
-const header = document.querySelector("header");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
+if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        if (navLinks.classList.contains("active")) {
+            icon.classList.remove("fa-bars");
+            icon.classList.add("fa-times");
+        } else {
+            icon.classList.remove("fa-times");
+            icon.classList.add("fa-bars");
+        }
+    });
+}
+
+
+// ===============================
+// Close Mobile Menu
+// ===============================
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
+
+    });
+
 });
 
 
 // ===============================
-// Smooth Scroll
+// Close Menu Outside Click
 // ===============================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.addEventListener("click", function(e){
 
-    anchor.addEventListener("click", function (e) {
+    if(
+        !menuToggle.contains(e.target) &&
+        !navLinks.contains(e.target)
+    ){
 
-        e.preventDefault();
+        navLinks.classList.remove("active");
 
-        const target = document.querySelector(this.getAttribute("href"));
+        const icon = menuToggle.querySelector("i");
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+        icon.classList.remove("fa-times");
+        icon.classList.add("fa-bars");
 
-    });
+    }
+
+});
+
+
+// ===============================
+// Sticky Header Shadow
+// ===============================
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll",()=>{
+
+    if(window.scrollY > 40){
+
+        header.style.boxShadow="0 8px 20px rgba(0,0,0,.15)";
+
+    }
+
+    else{
+
+        header.style.boxShadow="none";
+
+    }
 
 });
 
@@ -41,28 +98,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===============================
 
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav ul li a");
+const navItems = document.querySelectorAll(".nav-links a");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
-    let current = "";
+    let current="";
 
-    sections.forEach(section => {
+    sections.forEach(section=>{
 
         const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
 
-        if (window.scrollY >= sectionTop) {
+        if(window.scrollY >= sectionTop){
+
             current = section.getAttribute("id");
+
         }
 
     });
 
-    navLinks.forEach(link => {
+    navItems.forEach(link=>{
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if(link.getAttribute("href") === "#" + current){
+
             link.classList.add("active");
+
         }
 
     });
@@ -76,49 +138,86 @@ window.addEventListener("scroll", () => {
 
 const scrollBtn = document.getElementById("scrollTopBtn");
 
-if (scrollBtn) {
+window.addEventListener("scroll",()=>{
 
-    window.addEventListener("scroll", () => {
+    if(window.scrollY > 400){
 
-        if (window.scrollY > 400) {
-            scrollBtn.style.display = "flex";
-        } else {
-            scrollBtn.style.display = "none";
+        scrollBtn.style.display="flex";
+
+    }
+
+    else{
+
+        scrollBtn.style.display="none";
+
+    }
+
+});
+
+scrollBtn.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+});
+
+
+// ===============================
+// Smooth Scroll
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+    anchor.addEventListener("click",function(e){
+
+        e.preventDefault();
+
+        const target=document.querySelector(this.getAttribute("href"));
+
+        if(target){
+
+            window.scrollTo({
+
+                top:target.offsetTop-80,
+
+                behavior:"smooth"
+
+            });
+
         }
 
     });
 
-    scrollBtn.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-
-    });
-
-}
+});
 
 
 // ===============================
 // Reveal Animation
 // ===============================
 
-const reveals = document.querySelectorAll(
-    ".service-card,.qualification-card,.review-card,.gallery-grid img,.benefits-grid div,.features div,.achievement-content,.doctor-box,.news-card"
+const reveals=document.querySelectorAll(
+
+".service-card,.qualification-card,.gallery-grid img,.review-card,.doctor-box,.about-content,.achievement-content,.news-card,.benefits-grid div,.features div"
+
 );
 
-function revealElements() {
+function reveal(){
 
-    reveals.forEach(item => {
+    reveals.forEach(item=>{
 
-        const windowHeight = window.innerHeight;
+        const windowHeight=window.innerHeight;
 
-        const revealTop = item.getBoundingClientRect().top;
+        const top=item.getBoundingClientRect().top;
 
-        if (revealTop < windowHeight - 100) {
+        if(top < windowHeight-100){
 
-            item.classList.add("show");
+            item.style.opacity="1";
+            item.style.transform="translateY(0)";
 
         }
 
@@ -126,116 +225,48 @@ function revealElements() {
 
 }
 
-window.addEventListener("scroll", revealElements);
-window.addEventListener("load", revealElements);
+reveals.forEach(item=>{
 
-
-// ===============================
-// Gallery Hover Effect
-// ===============================
-
-const gallery = document.querySelectorAll(".gallery-grid img");
-
-gallery.forEach(img => {
-
-    img.addEventListener("mouseenter", () => {
-        img.style.transform = "scale(1.05)";
-    });
-
-    img.addEventListener("mouseleave", () => {
-        img.style.transform = "scale(1)";
-    });
+    item.style.opacity="0";
+    item.style.transform="translateY(40px)";
+    item.style.transition="all .7s ease";
 
 });
 
+window.addEventListener("scroll",reveal);
+
+reveal();
+
 
 // ===============================
-// Contact Form Validation
+// Appointment Form
 // ===============================
 
-const form = document.querySelector("form");
+const form=document.querySelector("form");
 
-if (form) {
+if(form){
 
-    form.addEventListener("submit", function (e) {
+form.addEventListener("submit",(e)=>{
 
-        e.preventDefault();
+e.preventDefault();
 
-        const name = form.querySelector('input[type="text"]');
-        const email = form.querySelector('input[type="email"]');
-        const phone = form.querySelector('input[type="tel"]');
+alert("Thank you! Your appointment request has been submitted successfully.");
 
-        if (
-            name.value.trim() === "" ||
-            email.value.trim() === "" ||
-            phone.value.trim() === ""
-        ) {
+form.reset();
 
-            alert("Please fill all required fields.");
-            return;
-
-        }
-
-        alert("Appointment Booked Successfully!");
-
-        form.reset();
-
-    });
+});
 
 }
 
 
 // ===============================
-// Service Card Hover
+// Current Year Footer (Optional)
 // ===============================
 
-document.querySelectorAll(".service-card").forEach(card => {
+const year=document.querySelector(".year");
 
-    card.addEventListener("mouseenter", () => {
-        card.style.transform = "translateY(-10px)";
-    });
+if(year){
 
-    card.addEventListener("mouseleave", () => {
-        card.style.transform = "translateY(0)";
-    });
+year.textContent=new Date().getFullYear();
 
-});
-
-
-// ===============================
-// Preloader (Optional)
-// ===============================
-
-window.addEventListener("load", () => {
-
-    document.body.classList.add("loaded");
-
-});
-
-const menu = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".nav-links");
-
-menu.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    if (menuToggle && navLinks) {
-
-        menuToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
-
-        document.querySelectorAll(".nav-links a").forEach(link => {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("active");
-            });
-        });
-
-    }
-
-});
+}
