@@ -1,15 +1,38 @@
 // ===============================
-// Sticky Header Shadow
+// Sticky Header
 // ===============================
 
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
-        header.style.boxShadow = "0 5px 15px rgba(0,0,0,0.15)";
+        header.classList.add("sticky");
     } else {
-        header.style.boxShadow = "none";
+        header.classList.remove("sticky");
     }
+});
+
+
+// ===============================
+// Smooth Scroll
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    });
+
 });
 
 
@@ -27,9 +50,8 @@ window.addEventListener("scroll", () => {
     sections.forEach(section => {
 
         const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.clientHeight;
 
-        if (pageYOffset >= sectionTop) {
+        if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
 
@@ -49,29 +71,80 @@ window.addEventListener("scroll", () => {
 
 
 // ===============================
-// Scroll Animation
+// Scroll To Top Button
 // ===============================
 
-const observer = new IntersectionObserver((entries) => {
+const scrollBtn = document.getElementById("scrollTopBtn");
 
-    entries.forEach(entry => {
+if (scrollBtn) {
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 400) {
+            scrollBtn.style.display = "flex";
+        } else {
+            scrollBtn.style.display = "none";
         }
 
     });
 
-}, {
-    threshold: 0.2
-});
+    scrollBtn.addEventListener("click", () => {
 
-document.querySelectorAll(".service-card,.review-card,.doctor-box,.gallery-grid img,.features div")
-.forEach(element => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
-    element.classList.add("hidden");
+    });
 
-    observer.observe(element);
+}
+
+
+// ===============================
+// Reveal Animation
+// ===============================
+
+const reveals = document.querySelectorAll(
+    ".service-card,.qualification-card,.review-card,.gallery-grid img,.benefits-grid div,.features div,.achievement-content,.doctor-box,.news-card"
+);
+
+function revealElements() {
+
+    reveals.forEach(item => {
+
+        const windowHeight = window.innerHeight;
+
+        const revealTop = item.getBoundingClientRect().top;
+
+        if (revealTop < windowHeight - 100) {
+
+            item.classList.add("show");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", revealElements);
+window.addEventListener("load", revealElements);
+
+
+// ===============================
+// Gallery Hover Effect
+// ===============================
+
+const gallery = document.querySelectorAll(".gallery-grid img");
+
+gallery.forEach(img => {
+
+    img.addEventListener("mouseenter", () => {
+        img.style.transform = "scale(1.05)";
+    });
+
+    img.addEventListener("mouseleave", () => {
+        img.style.transform = "scale(1)";
+    });
 
 });
 
@@ -82,131 +155,59 @@ document.querySelectorAll(".service-card,.review-card,.doctor-box,.gallery-grid 
 
 const form = document.querySelector("form");
 
-if(form){
+if (form) {
 
-form.addEventListener("submit", function(e){
+    form.addEventListener("submit", function (e) {
 
-    e.preventDefault();
+        e.preventDefault();
 
-    const name =
-    this.querySelector('input[type="text"]').value.trim();
+        const name = form.querySelector('input[type="text"]');
+        const email = form.querySelector('input[type="email"]');
+        const phone = form.querySelector('input[type="tel"]');
 
-    const email =
-    this.querySelector('input[type="email"]').value.trim();
+        if (
+            name.value.trim() === "" ||
+            email.value.trim() === "" ||
+            phone.value.trim() === ""
+        ) {
 
-    const phone =
-    this.querySelector('input[type="tel"]').value.trim();
+            alert("Please fill all required fields.");
+            return;
 
-    if(name === "" || email === "" || phone === ""){
+        }
 
-        alert("Please fill all required fields.");
+        alert("Appointment Booked Successfully!");
 
-        return;
+        form.reset();
 
-    }
-
-    alert("Thank you! Your appointment request has been submitted.");
-
-    form.reset();
-
-});
+    });
 
 }
 
 
 // ===============================
-// Gallery Lightbox
+// Service Card Hover
 // ===============================
 
-const galleryImages = document.querySelectorAll(".gallery-grid img");
+document.querySelectorAll(".service-card").forEach(card => {
 
-galleryImages.forEach(img => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-10px)";
+    });
 
-    img.addEventListener("click", () => {
-
-        const overlay = document.createElement("div");
-
-        overlay.style.position = "fixed";
-        overlay.style.top = "0";
-        overlay.style.left = "0";
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        overlay.style.background = "rgba(0,0,0,.9)";
-        overlay.style.display = "flex";
-        overlay.style.justifyContent = "center";
-        overlay.style.alignItems = "center";
-        overlay.style.cursor = "pointer";
-        overlay.style.zIndex = "9999";
-
-        const image = document.createElement("img");
-
-        image.src = img.src;
-        image.style.maxWidth = "90%";
-        image.style.maxHeight = "90%";
-        image.style.borderRadius = "10px";
-        image.style.boxShadow = "0 0 30px #fff";
-
-        overlay.appendChild(image);
-
-        document.body.appendChild(overlay);
-
-        overlay.addEventListener("click", () => {
-
-            document.body.removeChild(overlay);
-
-        });
-
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
     });
 
 });
 
 
 // ===============================
-// Back To Top Button
+// Preloader (Optional)
 // ===============================
 
-// ===============================
-// Back To Top Button
-// ===============================
+window.addEventListener("load", () => {
 
-const topBtn = document.createElement("button");
-
-topBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-
-topBtn.id = "topBtn";
-
-document.body.appendChild(topBtn);
-
-topBtn.style.position = "fixed";
-topBtn.style.right = "20px";
-topBtn.style.bottom = "95px";   // Above WhatsApp
-topBtn.style.width = "55px";
-topBtn.style.height = "55px";
-topBtn.style.border = "none";
-topBtn.style.borderRadius = "50%";
-topBtn.style.background = "#16a34a";
-topBtn.style.color = "#fff";
-topBtn.style.fontSize = "20px";
-topBtn.style.cursor = "pointer";
-topBtn.style.display = "none";
-topBtn.style.boxShadow = "0 5px 15px rgba(0,0,0,.3)";
-topBtn.style.zIndex = "9998";
-
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 300){
-        topBtn.style.display = "block";
-    }else{
-        topBtn.style.display = "none";
-    }
-
-});
-
-topBtn.addEventListener("click", () => {
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+    document.body.classList.add("loaded");
 
 });

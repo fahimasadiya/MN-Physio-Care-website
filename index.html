@@ -4,418 +4,715 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>MN PhysioCare Clinic | Dr. Mohisin Sheikh</title>
 
     <meta name="description"
         content="MN PhysioCare Clinic - Advanced Rehabilitation & Physiotherapy Centre by Dr. Mohisin Sheikh">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords"
+        content="Physiotherapy, Physiotherapist, Rehabilitation, Sports Injury, Dry Needling, Cupping Therapy, MN PhysioCare Clinic, Dr. Mohisin Sheikh">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <meta name="author" content="MN PhysioCare Clinic">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="image/" type="image/jpeg">
 
 </head>
 
 <body>
 
     <!--================ HEADER ================-->
+<header>
+    <div class="container">
 
-    <header>
+        <a href="#" class="logo">
 
-        <div class="container">
+            <img src="image/logo.jpeg" alt="MN PhysioCare Clinic">
 
-            <div class="logo">
-
-                <img src="image/logo.jpeg" alt="MN Physio Care Clinic Logo">
-
-                <div class="logo-text">
-                    <h2>MN Physio Care Clinic</h2>
-                    <span>Advanced Rehabilitation & Physiotherapy Centre</span>
-                </div>
-
+            <div class="logo-text">
+                <h2>MN PhysioCare Clinic</h2>
+                <span>Advanced Rehabilitation & Physiotherapy Centre</span>
             </div>
 
-            <nav>
+        </a>
 
-                <ul>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#doctor">Doctor</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
 
-                    <li><a href="#home">Home</a></li>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
 
-                    <li><a href="#about">About</a></li>
+    </div>
+</header>
 
-                    <li><a href="#services">Services</a></li>
+        <!-- Mobile Menu Button -->
 
-                    <li><a href="#doctor">Doctor</a></li>
+        <div class="menu-toggle" id="menu-toggle">
 
-                    <li><a href="#benefits">Benefits</a></li>
-
-                    <li><a href="#gallery">Gallery</a></li>
-
-                    <li><a href="#reviews">Reviews</a></li>
-
-                    <li><a href="#contact">Contact</a></li>
-
-                    
-
-                </ul>
-
-            </nav>
+            <i class="fas fa-bars"></i>
 
         </div>
 
-    </header>
+        <!-- Navigation -->
 
-    <!--================ HERO ================-->
+        <nav id="navbar">
 
-    <section class="hero" id="home">
+            <ul>
 
-        <div class="container">
+                <li><a href="#home" class="active">Home</a></li>
 
-            <div class="hero-content">
+                <li><a href="#about">About</a></li>
 
-                <h1>Move Better, Live Better</h1>
+                <li><a href="#services">Services</a></li>
 
-                <p>
+                <li><a href="#benefits">Benefits</a></li>
 
-                    Expert Physiotherapy Treatment for Back Pain,
-                    Neck Pain, Knee Pain, Frozen Shoulder,
-                    Sports Injury, Arthritis, Stroke Rehabilitation,
-                    Post Surgery Rehabilitation and Home Physiotherapy.
+                <li><a href="#doctor">Doctor</a></li>
 
-                </p>
+                <li><a href="#gallery">Gallery</a></li>
+
+              <li><a href="#reviews">Reviews</a></li>
+
+                <li><a href="#news">News</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!--================ HERO SECTION ================-->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-subtitle">
+                Welcome to MN PhysioCare Clinic
+            </span>
+
+            <h1>
+                Your Health, Our Priority
+            </h1>
+
+            <h3>
+                Advanced Rehabilitation & Physiotherapy Centre
+            </h3>
+
+            <p>
+                Led by <strong>Dr. Mohisin Sheikh (PT)</strong>, we provide
+                evidence-based physiotherapy for orthopaedic conditions,
+                sports injuries, neurological rehabilitation, post-operative
+                recovery, back pain, neck pain, joint pain, and home
+                physiotherapy services.
+            </p>
+
+            <div class="hero-buttons">
 
                 <a href="#contact" class="btn">
+                    <i class="fas fa-calendar-check"></i>
                     Book Appointment
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    <i class="fas fa-arrow-right"></i>
+                    Our Services
                 </a>
 
             </div>
 
-            <div class="hero-image">
+            <div class="hero-features">
 
-                <img src="image/doctor.jpeg"
-                    alt="Dr Mohsin Sheikh">
+                <div class="feature-item">
+                    <i class="fas fa-user-md"></i>
+                    <span>Expert Care</span>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>Personalized Treatment</span>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-award"></i>
+                    <span>Trusted Clinic</span>
+                </div>
 
             </div>
 
         </div>
 
-    </section>
+        <div class="hero-image">
 
-    <!--================ ABOUT ================-->
+            <img src="image/doctor.jpeg" alt="Dr. Mohisin Sheikh">
 
-    <section class="about" id="about">
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ ABOUT SECTION ================-->
+
+<section class="about" id="about">
 
     <div class="container">
 
         <div class="about-content">
 
+            <!-- About Image -->
+
             <div class="about-image">
+
                 <img src="image/about00.jpeg" alt="MN PhysioCare Clinic">
+
             </div>
+
+            <!-- About Text -->
 
             <div class="about-text">
 
-                <h2>About Us</h2>
+                <span class="section-tag">
 
-                <h3>MN PhysioCare – Advanced Rehabilitation & Physiotherapy Clinc </h3>
+                   <h2> About Our Clinic</h2>
+                </span>
+
+                <h2>
+                    Welcome to <span>MN PhysioCare Clinic</span>
+                </h2>
 
                 <p>
-                    MN PhysioCare is a modern physiotherapy clinic dedicated to restoring
-                    health through movement and personalized care.
+                    MN PhysioCare Clinic is a trusted Advanced Rehabilitation &
+                    Physiotherapy Centre dedicated to providing high-quality,
+                    evidence-based physiotherapy services. Our goal is to relieve
+                    pain, restore mobility, improve strength, and help every
+                    patient return to an active and healthy lifestyle.
                 </p>
 
                 <p>
-                    We specialize in treating Orthopedic, Neurological,
-                    Sports Injuries and Post-Surgical conditions using
-                    evidence-based rehabilitation techniques.
+                    Under the guidance of <strong>Dr. Mohisin Sheikh (PT)</strong>,
+                    we provide personalized treatment plans using modern
+                    physiotherapy techniques and advanced rehabilitation methods
+                    for patients of all age groups.
                 </p>
 
-                <h3>Our Services</h3>
+                <div class="about-features">
+
+                    <div class="about-box">
+
+                        <i class="fas fa-user-md"></i>
+
+                        <div>
+
+                            <h4>Experienced Physiotherapist</h4>
+
+                            <p>Professional and compassionate patient care.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="about-box">
+
+                        <i class="fas fa-heartbeat"></i>
+
+                        <div>
+
+                            <h4>Advanced Rehabilitation</h4>
+
+                            <p>Latest physiotherapy techniques for faster recovery.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="about-box">
+
+                        <i class="fas fa-hand-holding-heart"></i>
+
+                        <div>
+
+                            <h4>Personalized Treatment</h4>
+
+                            <p>Customized treatment plans for every patient.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="about-box">
+
+                        <i class="fas fa-award"></i>
+
+                        <div>
+
+                            <h4>Quality Healthcare</h4>
+
+                            <p>Safe, effective, and evidence-based physiotherapy.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="#contact" class="btn">
+          </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!--================ QUALIFICATION ================-->
+
+<section class="qualification" id="qualification">
+
+    <div class="container">
+
+        <h2>Degrees & Certifications</h2>
+
+        <div class="qualification-grid">
+
+            <div class="qualification-card">
+                <img src="image/degree.jpeg" alt="Master of Physiotherapy">
+
+                <h3>Master of Physiotherapy (M.P.T.)</h3>
+
+                <p>
+                    Janardan Rai Nagar Rajasthan Vidyapeeth,
+                    Udaipur.
+                </p>
+            </div>
+
+            <div class="qualification-card">
+
+                <img src="image/certification.jpeg" alt="Professional Certificate">
+
+                <h3>Professional Certification</h3>
+
+                <p>
+                    Head Physio – National Inter University
+                    Kho-Kho Tournament (West Zone),
+                    Govind Guru Tribal University, Banswara.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ SERVICES ================-->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <h2>Our Physiotherapy Services</h2>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h3>Manual Therapy</h3>
+                <p>Hands-on treatment to reduce pain and restore movement.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-syringe"></i>
+                <h3>Dry Needling</h3>
+                <p>Relieves trigger points and muscular pain.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-circle-notch"></i>
+                <h3>Cupping Therapy</h3>
+                <p>Improves circulation and accelerates healing.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-dumbbell"></i>
+                <h3>IASTM Therapy</h3>
+                <p>Instrument Assisted Soft Tissue Mobilization.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-bone"></i>
+                <h3>K-CAT / MET / MFR</h3>
+                <p>Advanced rehabilitation techniques for faster recovery.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-brain"></i>
+                <h3>Neuro Rehabilitation</h3>
+                <p>Specialized rehabilitation for neurological disorders.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-running"></i>
+                <h3>Sports Injury Rehab</h3>
+                <p>Complete rehabilitation for athletes and sports injuries.</p>
+            </div>
+
+            <div class="service-card">
+                <i class="fas fa-wheelchair"></i>
+                <h3>Post Operative Rehab</h3>
+                <p>Recovery after orthopedic and neurological surgeries.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ BENEFITS ================-->
+
+<section class="benefits" id="benefits">
+
+    <div class="container">
+
+        <h2>Benefits of Physiotherapy</h2>
+
+        <div class="benefits-grid">
+
+            <div>✔ Pain Relief</div>
+
+            <div>✔ Improved Mobility</div>
+
+            <div>✔ Better Flexibility</div>
+
+            <div>✔ Faster Recovery</div>
+
+            <div>✔ Avoid Surgery</div>
+
+            <div>✔ Improved Balance</div>
+
+            <div>✔ Better Posture</div>
+
+            <div>✔ Muscle Strength</div>
+
+            <div>✔ Reduced Medication</div>
+
+            <div>✔ Better Quality of Life</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ WHY CHOOSE US ================-->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <h2>Why Choose MN PhysioCare?</h2>
+
+        <div class="features">
+
+            <div>✔ Experienced Physiotherapist</div>
+
+            <div>✔ Evidence Based Treatment</div>
+
+            <div>✔ Personalized Care</div>
+
+            <div>✔ Modern Equipment</div>
+
+            <div>✔ Affordable Consultation</div>
+
+            <div>✔ Home Physiotherapy</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--================ DOCTOR ================-->
+
+<section class="doctor" id="doctor">
+
+    <div class="container">
+
+        <h2>Meet Our Physiotherapist</h2>
+
+        <div class="doctor-box">
+
+            <div class="doctor-image">
+                <img src="image/mohsin.jpeg" alt="Dr. Mohisin Sheikh">
+            </div>
+
+            <div class="doctor-info">
+
+                <h3>Dr. Mohisin Sheikh (PT)</h3>
+
+                <h4>B.P.T., M.P.T. (Orthopaedics & Sports Injuries), MIAP</h4>
+
+                <p>
+                    Founder of <strong>MN PhysioCare Clinic</strong> with extensive
+                    experience in Orthopaedic Rehabilitation, Sports Injury
+                    Rehabilitation, Neurological Rehabilitation and
+                    Post-Surgical Recovery.
+                </p>
+
+                <p>
+                    Specialized in:
+                </p>
 
                 <ul>
-                    <li>Manual Therapy</li>
-                    <li>Dry Needling</li>
-                    <li>Cupping Therapy</li>
-                    <li>IASTM Therapy</li>
-                    <li>K-CAT / MET / MFR</li>
-                    <li>Neuro Rehabilitation</li>
-                    <li>Sports Team Rehab</li>
-                    <li>Post Operative Rehab</li>
+
+                    <li>✔ Manual Therapy</li>
+
+                    <li>✔ Dry Needling</li>
+
+                    <li>✔ Cupping Therapy</li>
+
+                    <li>✔ IASTM Therapy</li>
+
+                    <li>✔ K-CAT / MET / MFR</li>
+
+                    <li>✔ Sports Rehabilitation</li>
+
+                    <li>✔ Neuro Rehabilitation</li>
+
+                    <li>✔ Home Physiotherapy</li>
+
                 </ul>
 
+                <a href="#contact" class="btn">
+
+                    Book Appointment
+                </a>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
 
-    <!--================ SERVICES ================-->
-<section id="services" class="services">    <div class="service-container">
+<!--================ GALLERY ================-->
 
-    <div class="service-card">
-        <i class="fas fa-hand-holding-medical"></i>
-        <h3>Manual Therapy</h3>
-        <p>Hands-on treatment to reduce pain and improve joint mobility.</p>
+<section class="gallery" id="gallery">
+
+    <div class="container">
+
+        <h2>Clinic Gallery</h2>
+
+        <div class="gallery-grid">
+
+            <img src="image/clinic.jpeg" alt="Clinic">
+
+            <img src="image/physio.jpeg" alt="Physiotherapy">
+
+            <img src="image/exercise1.jpeg" alt="Exercise Therapy">
+
+            <img src="image/clinic3.jpeg" alt="Clinic">
+
+            <img src="image/Hijama.jpeg" alt="Hijama Therapy">
+
+            <img src="image/dry needling.jpeg" alt="Dry Needling">
+
+            <img src="image/clinicgallery1.jpeg" alt="Clinic">
+
+            <img src="image/clinicg2.jpeg" alt="Clinic">
+
+            <img src="image/hospital.jpeg" alt="Hospital">
+
+            <img src="image/gmch.jpeg" alt="Medical Camp">
+
+            <img src="image/gmch1.jpeg" alt="Medical Camp">
+
+            <img src="image/about00.jpeg" alt="Treatment">
+
+        </div>
+
     </div>
-
-    <div class="service-card">
-        <i class="fas fa-syringe"></i>
-        <h3>Dry Needling</h3>
-        <p>Relieves muscle pain and trigger points effectively.</p>
-    </div>
-
-    <div class="service-card">
-        <i class="fas fa-circle-notch"></i>
-        <h3>Cupping Therapy</h3>
-        <p>Improves blood circulation and reduces muscle stiffness.</p>
-    </div>
-
-    <div class="service-card">
-        <i class="fas fa-dumbbell"></i>
-        <h3>IASTM Therapy</h3>
-        <p>Instrument Assisted Soft Tissue Mobilization.</p>
-    </div>
-
-    <div class="service-card">
-        <i class="fas fa-bone"></i>
-        <h3>K-CAT / MET / MFR</h3>
-        <p>Advanced rehabilitation techniques for faster recovery.</p>
-    </div>
-
-    <div class="service-card">
-        <i class="fas fa-brain"></i>
-        <h3>Neuro Rehabilitation</h3>
-        <p>Specialized therapy for neurological conditions.</p>
-    </div>
-
-    <div class="service-card">
-        <i class="fas fa-running"></i>
-        <h3>Sports Team Rehab</h3>
-        <p>Professional rehabilitation for sports injuries.</p>
-    </div>
-
-    <div class="service-card">
-        <i class="fas fa-wheelchair"></i>
-        <h3>Post Operative Rehab</h3>
-        <p>Complete rehabilitation after orthopedic surgeries.</p>
-    </div>
-
-</div>
-
-
-    <section class="benefits" id="benefits">
-
-<div class="container">
-
-<h2>Benefits of Physiotherapy</h2>
-
-<div class="benefits-grid">
-
-<div>✔ Pain Relief</div>
-
-<div>✔ Improved Mobility & Flexibility</div>
-
-<div>✔ Faster Injury Recovery</div>
-
-<div>✔ Prevention of Future Injuries</div>
-
-<div>✔ Better Balance</div>
-
-<div>✔ Enhanced Strength & Stability</div>
-
-<div>✔ Avoids Surgery</div>
-
-<div>✔ Reduced Medication Dependence</div>
-
-<div>✔ Improved Posture</div>
-
-<div>✔ Better Mental Well-being</div>
-
-</div>
-
-</div>
 
 </section>
 
-    <!--================ WHY US ================-->
+<!--================ ACHIEVEMENT ================-->
 
-    <section class="why-us">
+<section class="achievement" id="achievement">
 
-        <div class="container">
+    <div class="container">
 
-            <h2>Why Choose Us?</h2>
+        <h2>Achievement & Recognition</h2>
 
-            <div class="features">
+        <div class="achievement-content">
 
-                <div>✔ Experienced Physiotherapist</div>
+            <div class="achievement-image">
 
-                <div>✔ Personalized Treatment Plans</div>
+                <img src="image/dr asagar ali.jpeg"
+                    alt="Achievement Ceremony">
 
-                <div>✔ Modern Equipment</div>
+            </div>
 
-                <div>✔ Affordable Consultation</div>
+            <div class="achievement-text">
 
-                <div>✔ Friendly Environment</div>
+                <h3>Honoured by Dr. Syed Asgar Ali</h3>
 
-                <div>✔ Home Physiotherapy</div>
+                <p>
+                     Dr. Mohisin Sheikh was honoured during a
+                    special ceremony for his contribution towards
+                    Physiotherapy, Sports Rehabilitation and Community
+                    Health Services.
+
+                </p>
+
+                <h4>About Dr. Syed Asgar Ali</h4>
+
+                <ul>
+
+                    <li>Former International Kho-Kho Coach</li>
+
+                    <li>General Secretary, Rajasthan Kho-Kho Association</li>
+
+                    <li>Senior Sports Administrator</li>
+
+                    <li>National Sports Mentor</li>
+
+                    <li>Prominent Sports Personality of Rajasthan</li>
+
+                </ul>
+
+                <a href="#gallery" class="btn">
+
+                    View Gallery
+
+                </a>
 
             </div>
 
         </div>
 
-    </section>
+    </div>
 
-    <!--================ DOCTOR ================-->
+</section>
 
-    <section class="doctor" id="doctor">
-
-        <div class="container">
-
-            <h2>Meet Our Physiotherapist</h2>
-
-                <h3>Dr. Mohsin Sheikh (PT)</h3>
-
-<h4>
-B.P.T., M.P.T. (Ortho & Sports Injuries), MIAP
-</h4>
-
-<p>
-Founder of MN PhysioCare with expertise in Orthopedic Rehabilitation,
-Sports Injury Rehabilitation, Dry Needling,
-Manual Therapy, IASTM, Cupping Therapy,
-K-CAT, MET and Myofascial Release (MFR).
-</p>           <div class="doctor-box">
-
-                <div class="doctor-image">
-
-                    <img src="image/doctor.jpeg"
-                        alt="Dr Mohisin Sheikh">
-
-                </div>
-
-                <div class="doctor-info">
-
-                   
-
-                        
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--================ GALLERY ================-->
-
-    <section class="gallery" id="gallery">
-
-        <div class="container">
-
-            <h2>Clinic Gallery</h2>
-
-            <div class="gallery-grid">
-
-                <img src="image/clinic.jpeg" alt="Clinic">
-
-                <img src="image/physio.jpeg" alt="Treatment">
-
-                <img src="image/exercise1.jpeg" alt="exercise">
-
-                <img src="image/clinic3.jpeg" alt="clinic3">
-
-                <img src="image/Hijama.jpeg" alt="Hijama">
-
-                <img src="image/dry needling.jpeg" alt="Dry Needling">
-
-                <img src="image/clinicgallery1.jpeg" alt="Clinic Gallery">
-
-                <img src="image/clinicg2.jpeg" alt="Clinic Gallery">
-
-                <img src="image/hospital.jpeg" alt="Clinic Gallery">
-
-                <img src="image/gmch.jpeg" alt="Clinic Gallery">
-
-                <img src="image/gmch1.jpeg" alt="Clinic Gallery">
-                  
-                
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!--================ REVIEWS ================-->
+<!--================ REVIEWS ================-->
 
 <section class="reviews" id="reviews">
+
     <div class="container">
 
         <h2>Patient Reviews</h2>
 
         <div class="review-container">
 
-            <!-- Review 1 -->
             <div class="review-card">
+
                 <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>
                     Excellent treatment and professional guidance.
-                    Highly recommended. My back pain has reduced significantly.
+                    My back pain was relieved within a few sessions.
+                    Highly recommended.
                 </p>
+
                 <h4>Rahul Sharma</h4>
+
             </div>
 
-            <!-- Review 2 -->
             <div class="review-card">
+
                 <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>
-                    Very professional doctor. The staff was polite and the
-                    treatment was effective. Highly satisfied.
+                    Very professional physiotherapist.
+                    Friendly environment and excellent care.
                 </p>
+
                 <h4>Neha Jain</h4>
+
             </div>
 
-            <!-- Review 3 -->
             <div class="review-card">
+
                 <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>
-                    Recovered quickly after my knee surgery with the help of
-                    physiotherapy sessions. Thank you, Dr. Mohisin Sheikh.
+                    Recovered quickly after my knee surgery.
+                    Thank you Dr. Mohisin Sheikh.
                 </p>
+
                 <h4>Imran Khan</h4>
+
             </div>
 
-            <!-- Review 4 -->
             <div class="review-card">
+
                 <div class="stars">⭐⭐⭐⭐⭐</div>
+
                 <p>
-                    Best Physiotherapy clinic in banswara doctor Mohsin sheikh . Iwas suffering from Sciatica
-                    for a month but when i went there and showed it to him, after 7 days I got complete releif
-                    from the problem.
+                    Best Physiotherapy Clinic in Banswara.
+                    My Sciatica pain completely disappeared after one week of treatment.
                 </p>
+
                 <h4>Sciatica Patient</h4>
+
             </div>
 
         </div>
 
     </div>
+
 </section>
-    
-    </section>
 
 
-
-    <!-- ===========================
-     News & Media Coverage
-=========================== -->
+<!--================ NEWS ================-->
 
 <section class="news" id="news">
 
@@ -424,138 +721,206 @@ K-CAT, MET and Myofascial Release (MFR).
         <h2>News & Media Coverage</h2>
 
         <p class="section-subtitle">
-            MN Physio Care Clinic featured in newspapers for successful
-            physiotherapy and Hijama therapy camps.
+
+            MN PhysioCare Clinic featured in newspapers for
+            Physiotherapy Camps, Hijama Therapy and Community Health Services.
+
         </p>
 
         <div class="news-gallery">
 
             <div class="news-card">
-                <img src="image/newspaper1.jpeg" alt="Newspaper article featuring MN Physio Care Clinic Hijama therapy camp coverage with headline and clinic name">
+                <img src="image/newspaper1.jpeg" alt="">
             </div>
 
             <div class="news-card">
-                <img src="image/newspaper2.jpeg" alt="Newspaper coverage of MN Physio Care Clinic physiotherapy event showing staff and text from the story">
+                <img src="image/newspaper2.jpeg" alt="">
             </div>
 
             <div class="news-card">
-                <img src="image/newspaper3.jpeg" alt="Newspaper page showing MN Physio Care Clinic team treating patients during a therapy camp in a community setting">
+                <img src="image/newspaper3.jpeg" alt="">
             </div>
 
             <div class="news-card">
-                <img src="image/newspaper4.jpeg" alt="Newspaper feature highlighting MN Physio Care Clinic wellness program and patient care with visible headline text">
+                <img src="image/newspapr4.jpeg" alt="">
             </div>
 
             <div class="news-card">
-                <img src="image/newspaper5.jpeg" alt="Newspaper article about MN Physio Care Clinic medical camp and successful physiotherapy sessions with an encouraging tone">
+                <img src="image/newspaper5.jpeg" alt="">
             </div>
 
             <div class="news-card">
-                <img src="image/newspaper7.jpeg" alt="Newspaper story about MN Physio Care Clinic community health services with staff photos and clinic name visible">
+                <img src="image/newspaper7.jpeg" alt="">
             </div>
-           <div class="news-card">
-                <img src="image/newspaper8.jpeg" alt="Newspaper coverage of MN Physio Care Clinic's physiotherapy and rehabilitation services with headline and clinic details">
+
+            <div class="news-card">
+                <img src="image/newspaper8.jpeg" alt="">
             </div>
+
         </div>
 
     </div>
 
 </section>
 
-    <!--================ CONTACT ================-->
 
-    <section class="contact" id="contact">
+<!--================ APPOINTMENT ================-->
 
-        <div class="container">
+<section class="contact" id="contact">
 
-            <h2>Book Appointment</h2>
+    <div class="container">
 
-            <form>
+        <h2>Book Appointment</h2>
 
-                <input type="text"
-                    placeholder="Full Name"
-                    required>
+        <form>
 
-                <input type="email"
-                    placeholder="Email Address"
-                    required>
+            <input
+                type="text"
+                placeholder="Full Name"
+                required>
 
-                <input type="tel"
-                    placeholder="Phone Number"
-                    required>
+            <input
+                type="email"
+                placeholder="Email Address"
+                required>
 
-                <textarea rows="6"
-                    placeholder="Describe Your Problem"></textarea>
+            <input
+                type="tel"
+                placeholder="Phone Number"
+                required>
 
-                <button type="submit">
+            <textarea
+                rows="6"
+                placeholder="Describe Your Problem"></textarea>
 
-                    Book Appointment
+            <button type="submit">
 
-                </button>
+                Book Appointment
 
-            </form>
+            </button>
 
-        </div>
+        </form>
 
-    </section>
+    </div>
 
-    <!--================ CONTACT INFO ================-->
+</section>
 
-    <section class="contact-info">
 
-        <div class="container">
+<!--================ CONTACT INFO ================-->
 
-            <h2>Contact Us</h2>
+<section class="contact-info">
 
-            <p>📍 MN Physio Care Clinic</p>
-         <p>
-    📞 +91 90012-01786 |
-    <a href="https://wa.me/919001201786" target="_blank">
-        <i class="fab fa-whatsapp"></i> WhatsApp Us
-    </a>
-</p>
+    <div class="container">
 
-            <p>📧 mohsinuddinsheikh9001@gmail.com</p>
+        <h2>Contact Us</h2>
 
-            <p>🕘 Monday – Saturday | 9:00 AM – 6:00 PM</p>
+        <p>
 
-        </div>
+            📍 MN PhysioCare Clinic,
+            Banswara, Rajasthan
 
-    </section>
+        </p>
 
-    <!-- Social Media Section -->
+        <p>
+
+            📞 +91 90012 01786
+
+        </p>
+
+        <p>
+
+            📧 mohsinuddinsheikh9001@gmail.com
+
+        </p>
+
+        <p>
+
+            🕘 Monday – Saturday
+
+            <br>
+
+            9:00 AM – 6:00 PM
+
+        </p>
+
+        <a
+            href="https://wa.me/919001201786"
+            class="btn"
+            target="_blank">
+
+            <i class="fab fa-whatsapp"></i>
+
+            WhatsApp Now
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!--================ GOOGLE MAP ================-->
+
+<section class="map">
+
+    <div class="container">
+
+        <h2>Find Us</h2>
+
+        <iframe
+
+            src="https://www.google.com/maps?q=MN+PhysioCare+Clinic+Banswara&output=embed"
+
+            width="100%"
+
+            height="450"
+
+            style="border:0; border-radius:20px;"
+
+            loading="lazy"
+
+            allowfullscreen>
+
+        </iframe>
+
+    </div>
+
+</section>
+
+<!--================ SOCIAL MEDIA ================-->
+
 <section class="social-media" id="social">
 
     <div class="container">
 
         <h2>Follow Us</h2>
 
-        <p>Stay connected with MN Physio Care Clinic.</p>
+        <p>
+            Stay connected with MN PhysioCare Clinic on our social platforms.
+        </p>
 
         <div class="social-icons">
 
             <!-- Instagram -->
-          <a href="https://www.instagram.com/mn.physiocare" target="_blank">
+            <a href="https://www.instagram.com/mn.physiocare" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
-             </a>
             </a>
 
-          <!-- WhatsApp -->
-            <a href="https://wa.me/919001201786" target="_blank">
+            <!-- WhatsApp -->
+                       <!-- WhatsApp -->
+            <a href="https://wa.me/919001201786" target="_blank" aria-label="WhatsApp">
                 <i class="fab fa-whatsapp"></i>
             </a>
 
             <!-- Google Maps -->
-            <a href="https://maps.google.com/" target="_blank">
+            <a href="https://maps.app.goo.gl/V1iiwT54dm7kwCAT6" target="_blank" aria-label="Google Maps">
                 <i class="fas fa-map-marker-alt"></i>
             </a>
 
             <!-- Email -->
-            <a href="mailto:mnphysiocarebsw@gmail.com">
+            <a href="mailto:mohsinuddinsheikh9001@gmail.com" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-
-            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
         </div>
 
@@ -563,33 +928,58 @@ K-CAT, MET and Myofascial Release (MFR).
 
 </section>
 
-    <!--================ FOOTER ================-->
+<!--================ FOOTER ================-->
 
-    <footer>
+<footer>
+
+    <div class="container">
 
         <p>
-            © 2026 MN PhysioCare | Rehabilitation & Physiotherapy Centre
 
-                     Heal by Hands, Live by Strength
+            © 2026 <strong>MN PhysioCare Clinic</strong><br>
 
-             All Rights Reserved.
+            Advanced Rehabilitation & Physiotherapy Centre
 
         </p>
 
-    </footer>
+        <p>
 
-    <script src="main.js"></script>
+            <strong>Heal by Hands, Live by Strength</strong>
 
-    <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919001201786" class="whatsapp-btn" target="_blank">
- <i class="fab fa-whatsapp"></i>
+        </p>
 
- <button id="scrollTopBtn">
+        <p>
+
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<!--================ FLOATING WHATSAPP ================-->
+
+<a href="https://wa.me/919001201786"
+   class="whatsapp-btn"
+   target="_blank"
+   aria-label="WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!--================ SCROLL TO TOP ================-->
+
+<button id="scrollTopBtn" aria-label="Scroll to Top">
+
     <i class="fas fa-arrow-up"></i>
 
-    <div class="scroll-btn">...</div>
 </button>
-</a>
+
+<!--================ JAVASCRIPT ================-->
+
+<script src="main.js"></script>
 
 </body>
 

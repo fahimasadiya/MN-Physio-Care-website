@@ -1,197 +1,227 @@
-/* MN Physio Care Clinic - style.css */
-/* Base */
+/* MN PhysioCare Clinic - style.css */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;background:#f7faf8;color:#333;line-height:1.6}
+body{font-family:Poppins,sans-serif;line-height:1.6;color:#333;background:#f7fbf8}
 .container{width:min(1200px,92%);margin:auto}
-img{max-width:100%;display:block}
-a{text-decoration:none}
-section{padding:70px 0}
-h1,h2,h3,h4{color:#14532d}
-h2{text-align:center;margin-bottom:35px;font-size:2rem}
-.btn{display:inline-block;background:#16a34a;color:#fff;padding:14px 28px;border-radius:30px;font-weight:600;transition:.3s}
-.btn:hover{background:#15803d}
+/*==========================
+HEADER
+==========================*/
 
-/* Header */
-header{position:sticky;top:0;background:#fff;z-index:1000;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-header .container{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
-.logo{display:flex;align-items:center;gap:15px}
-.logo img{width:70px;height:70px;border-radius:50%}
-.logo-text h2{text-align:left;font-size:28px;margin:0}
-.logo-text span{font-size:14px;color:#b91c1c}
-nav ul{display:flex;list-style:none;gap:22px}
-nav a{color:#222;font-weight:600}
-nav a:hover{color:#16a34a}
-
-/* Hero */
-.hero{background:linear-gradient(rgba(20,83,45,.8),rgba(20,83,45,.8)),url('image/hero.jpg') center/cover no-repeat;color:#fff}
-.hero .container{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.hero h1{color:#fff;font-size:56px}
-.hero p{font-size:20px;margin:20px 0 30px}
-.hero-image img{border-radius:20px;box-shadow:0 10px 25px rgba(0,0,0,.3)}
-
-/* Cards */
-.service-container,.gallery-grid,.benefits-grid,.features,.review-container{display:grid;gap:25px}
-.service-container,.gallery-grid,.benefits-grid,.features{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
-.service-card,.review-card,.doctor-box{background:#fff;border-radius:18px;padding:24px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-.service-card{text-align:center;transition:.3s}
-.service-card:hover,.review-card:hover{transform:translateY(-8px)}
-.service-card i{font-size:36px;color:#16a34a;margin-bottom:15px}
-.about-content,.doctor-box{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-.about-image img,.doctor-image img,.gallery-grid img{border-radius:18px}
-.gallery-grid img{height:220px;object-fit:cover;transition:.3s}
-.gallery-grid img:hover{transform:scale(1.04)}
-.benefits-grid div,.features div{background:#e8f8ee;padding:18px;border-radius:12px;text-align:center;font-weight:600}
-.review-container{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.review-card{text-align:center}
-.stars{font-size:22px;color:#FFD700;margin-bottom:15px}
-.review-card h4{color:#b30000}
-
-/* Form */
-form{display:grid;gap:16px;max-width:700px;margin:auto}
-input,textarea{padding:14px;border:1px solid #ccc;border-radius:10px;font:inherit}
-button{padding:14px;border:none;border-radius:10px;background:#16a34a;color:#fff;font-weight:600;cursor:pointer}
-button:hover{background:#15803d}
-
-/* Contact */
-.contact-info{background:#14532d;color:#fff;text-align:center}
-.contact-info h2,.contact-info p,.contact-info a{color:#fff}
-footer{background:#0f172a;color:#fff;text-align:center;padding:20px}
-
-/* Floating */
-.whatsapp-btn{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 5px 15px rgba(0,0,0,.25);z-index:9999}
-#scrollTopBtn{position:fixed;right:20px;bottom:95px;width:50px;height:50px;border:none;border-radius:50%;background:#16a34a;color:#fff;display:none;align-items:center;justify-content:center;cursor:pointer;z-index:9998}
-
-/* Responsive */
-@media(max-width:992px){
-header .container,.hero .container,.about-content,.doctor-box{display:grid;grid-template-columns:1fr}
-header .container{text-align:center}
-nav ul{justify-content:center;flex-wrap:wrap;margin-top:15px}
-.hero h1{font-size:42px}
-}
-@media(max-width:576px){
-.logo-text h2{font-size:22px}
-.hero h1{font-size:34px}
-.whatsapp-btn{right:15px;bottom:15px;width:55px;height:55px}
-#scrollTopBtn{right:15px;bottom:85px;width:45px;height:45px}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(18, 70, 57, 0.92);
+    backdrop-filter:blur(10px);
+    z-index:9999;
+    box-shadow:0 3px 15px rgba(4, 112, 10, 0.15);
 }
 
-/* ===============================
-   Social Media Section
-================================== */
-
-.social-media{
-    padding:80px 20px;
-    background:#ffffff;
-    text-align:center;
-}
-
-.social-media h2{
-    font-size:38px;
-    color:#0B4F8A;
-    margin-bottom:10px;
-    font-weight:700;
-}
-
-.social-media p{
-    color:#555;
-    font-size:17px;
-    margin-bottom:40px;
-}
-
-/* Icons Container */
-
-.social-icons{
+header .container{
+    max-width:1400px;
+    margin:auto;
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items:center;
-    gap:25px;
-    flex-wrap:wrap;
+    padding:12px 40px;
 }
 
-/* Icon Circle */
+/* Logo */
 
-.social-icons a{
-    width:65px;
-    height:65px;
+.logo{
     display:flex;
-    justify-content:center;
     align-items:center;
     text-decoration:none;
+    gap:15px;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
     border-radius:50%;
-    background:#ffffff;
-    border:3px solid #1E7D32;
-    color:#1E7D32;
-    font-size:30px;
-    transition:0.4s ease;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    object-fit:cover;
+    background:#fff;
+    padding:4px;
 }
 
-/* Hover Effect */
-
-.social-icons a:hover{
-    transform:translateY(-8px) scale(1.08);
+.logo-text h2{
     color:#fff;
-    background:#1E7D32;
-    border-color:#1E7D32;
-    box-shadow:0 15px 30px rgba(0,0,0,.25);
+    font-size:24px;
+    font-weight:700;
+    margin:0;
+    line-height:1.1;
 }
 
-/* Individual Brand Colors */
-
-.social-icons a:nth-child(1):hover{
-    background:#E4405F;
-    border-color:#E4405F;
+.logo-text span{
+    display:block;
+    color:#0e130e;
+    font-size:14px;
+    font-weight: 500;
+    margin-top:3px;
 }
 
-.social-icons a:nth-child(2):hover{
-    background:#1877F2;
-    border-color:#1877F2;
+
+
+/* Navigation */
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:22px;
+    list-style:none;
 }
 
-.social-icons a:nth-child(3):hover{
-    background:#25D366;
-    border-color:#25D366;
+.nav-links li{
+    list-style:none;
 }
 
-.social-icons a:nth-child(4):hover{
-    background:#EA4335;
-    border-color:#EA4335;
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+    position:relative;
+    white-space:nowrap;
 }
 
-.social-icons a:nth-child(5):hover{
-    background:#D62828;
-    border-color:#D62828;
+.nav-links a:hover,
+.nav-links a.active{
+    color:#2ecc71;
 }
 
-/* Optional Text Under Icons */
-
-.social-name{
-    margin-top:15px;
-    font-size:15px;
-    color:#555;
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#2ecc71;
+    transition:.3s;
 }
 
-/* Mobile */
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width:100%;
+}
 
-@media(max-width:768px){
+/* Mobile Icon */
 
-    .social-media{
-        padding:60px 15px;
+.menu-toggle{
+    display:none;
+    color:#fff;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+
+    .nav-links{
+        gap:15px;
     }
 
-    .social-media h2{
-        font-size:30px;
+    .nav-links a{
+        font-size:15px;
     }
 
-    .social-icons{
-        gap:18px;
+}
+
+@media(max-width:992px){
+
+    .menu-toggle{
+        display:block;
     }
 
-    .social-icons a{
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:90px;
+        left:0;
+        width:100%;
+        background:#025e3c;
+        flex-direction:column;
+        padding:20px 0;
+        gap:20px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    header .container{
+        padding:10px 20px;
+    }
+
+    .logo img{
         width:55px;
         height:55px;
-        font-size:24px;
     }
 
+    .logo-text h2{
+        font-size:20px;
+    }
+
+    .logo-text span{
+        font-size:12px;
+    }
+
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{width:60px;height:60px;border-radius:50%;object-fit:cover;background:#fff}
+.logo-text h2{font-size:1.3rem}.logo-text span{font-size:.8rem}
+nav ul{display:flex;gap:20px;list-style:none;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:600}
+nav a:hover{color:#dff8ea}
+section{padding:70px 0}
+h2{text-align:center;color:#0b7a53;margin-bottom:30px;font-size:2rem}
+.hero{background:linear-gradient(rgba(11,122,83,.85),rgba(11,122,83,.85)),url("image/clinic.jpeg") center/cover;color:#fff}
+.hero .container{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:40px}
+.hero h1{font-size:3rem}.hero p{margin:20px 0}
+.btn{display:inline-block;background:#fff;color:#0b7a53;padding:14px 30px;border-radius:30px;text-decoration:none;font-weight:700}
+.btn:hover{background:#dff8ea}
+.hero-image img,.about-image img,.doctor-image img,.achievement-image img{width:100%;border-radius:18px;box-shadow:0 10px 25px rgba(0,0,0,.15)}
+.about-content,.doctor-box,.achievement-content{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}
+.qualification-grid,.service-container,.gallery-grid,.review-container,.news-gallery,.benefits-grid,.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.qualification-card,.service-card,.review-card,.news-card,.benefits-grid div,.features div{background:#fff;padding:24px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);text-align:center}
+.qualification-card img,.news-card img{width:100%;border-radius:12px}
+.service-card i{font-size:40px;color:#0b7a53;margin-bottom:12px}
+.gallery-grid img{width:100%;height:240px;object-fit:cover;border-radius:14px;transition:.3s}
+.gallery-grid img:hover{transform:scale(1.05)}
+form{max-width:700px;margin:auto;display:grid;gap:16px}
+input,textarea{padding:14px;border:1px solid #cfd8d3;border-radius:10px}
+button{background:#0b7a53;color:#fff;border:none;padding:15px;border-radius:10px;font-weight:700;cursor:pointer}
+button:hover{background:#086845}
+.contact-info,.social-media,footer{text-align:center}
+.social-icons{display:flex;justify-content:center;gap:18px;margin-top:20px}
+.social-icons a{width:55px;height:55px;border-radius:50%;background:#0b7a53;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:24px}
+.social-icons a:hover{background:#11a26f}
+footer{background:#06563b;color:#fff;padding:25px}
+.whatsapp-btn{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:32px;text-decoration:none;z-index:999}
+#scrollTopBtn{position:fixed;right:20px;bottom:95px;width:50px;height:50px;border-radius:50%}
+@media(max-width:768px){
+header .container,.hero .container,.about-content,.doctor-box,.achievement-content{display:block}
+nav ul{justify-content:center;margin-top:10px}
+.hero h1{font-size:2.2rem}
+.gallery-grid img{height:180px}
+}
+.doctor-box ul {
+    text-align: center;
+    list-style-position: inside;
+    padding: 0;
+    }
+    .doctor-box li{
+        margin: 8px 0;
+    }
+   .doctor-box ul{
+    padding-left: 25px;
+    margin-top: 10px;
+   } 
+   .doctor-box li{
+    margin: 8px 0;
+   }
+   ul{list-style: none;
 }
