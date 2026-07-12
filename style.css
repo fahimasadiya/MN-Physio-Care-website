@@ -233,30 +233,26 @@ nav ul{justify-content:center;margin-top:10px}
     cursor:pointer;
 }
 
-@media(max-width:768px){
-
-.nav-links{
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:#1d5b4f;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    max-height:0;
-    overflow:hidden;
-    transition:.4s;
-}
-
-.nav-links.active{
-    max-height:500px;
-    padding:20px 0;
-}
+@media (max-width:991px){
 
 .menu-toggle{
     display:block;
+}
+
+.nav-links{
+    position:absolute;
+    top:80px;
+    left:0;
+    width:100%;
+    background:#1b5e50;
+    flex-direction:column;
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.nav-links.active{
+    max-height:700px;
 }
 
 }
