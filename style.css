@@ -1666,3 +1666,25 @@ h2{
 }
 
 }
+
+.appointment-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #195c03c4;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.appointment-btn:hover {
+    background: #08381a;
+    color: white;
+}
+
+.appointment-btn {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+}
