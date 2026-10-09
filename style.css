@@ -1264,47 +1264,102 @@ p{
 /*=========================================
   REVIEWS SECTION
 =========================================*/
-
-.reviews{
-    background:#f8fcfa;
+/* Google Reviews Section */
+.reviews-section {
+    padding: 70px 20px;
+    background: #f4f9f5;
+    text-align: center;
 }
 
-.review-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:45px;
+.reviews-container {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.review-card{
-    background:#fff;
-    padding:35px 28px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.35s;
+.reviews-subtitle {
+    color: #288653;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-.review-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+.reviews-section h2 {
+    color: #174d32;
+    font-size: 32px;
+    margin: 12px 0;
 }
 
-.review-card .stars{
-    font-size:22px;
-    margin-bottom:18px;
+.reviews-description {
+    color: #606b63;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
 }
 
-.review-card p{
-    color:#555;
-    line-height:1.8;
-    margin-bottom:20px;
+.review-card {
+    max-width: 520px;
+    margin: 0 auto 28px;
+    padding: 30px 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e0ece3;
+    box-shadow: 0 6px 22px rgba(25, 75, 45, 0.08);
 }
 
-.review-card h4{
-    color:#0b7a53;
-    font-size:18px;
-    font-weight:600;
+.review-stars {
+    color: #f5b521;
+    font-size: 28px;
+    letter-spacing: 3px;
+}
+
+.review-card h3 {
+    color: #174d32;
+    font-size: 21px;
+    margin: 14px 0 10px;
+}
+
+.review-card p {
+    color: #606b63;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.google-label {
+    color: #288653;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.google-reviews-button {
+    display: inline-block;
+    background: #27834c;
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.google-reviews-button:hover {
+    background: #185d35;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .reviews-section {
+        padding: 50px 16px;
+    }
+
+    .reviews-section h2 {
+        font-size: 26px;
+    }
+
+    .google-reviews-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 /*=========================================
