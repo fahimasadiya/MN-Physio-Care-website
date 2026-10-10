@@ -1830,88 +1830,94 @@ h2{
 }
 
 
-/* FINAL GALLERY FIX */
-#gallery .gallery-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    gap: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
+/* ==========================================================================
+   Gallery Section - Fixed Masonry Layout
+   ========================================================================== */
 
-#gallery .gallery-grid a {
-    display: block !important;
-    width: 100% !important;
-    height: 230px !important;
-    overflow: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    line-height: 0 !important;
-}
+/* ==========================================================================
+   Gallery Section - Clean Flexbox Layout (No Cropping, No White Space)
+   ========================================================================== */
 
-#gallery .gallery-grid img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    object-position: center !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-@media (max-width: 600px) {
-    #gallery .gallery-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-
-    #gallery .gallery-grid a {
-        height: 170px !important;
-    }
-}
-
-/* Remove Gallery White Space */
-#gallery .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-#gallery .gallery-grid {
-    gap: 0 !important;
-    row-gap: 0 !important;
-    column-gap: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-#gallery .gallery-grid a {
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    line-height: 0 !important;
-}
-
-#gallery .gallery-grid img {
-    display: block !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    background:#f8fcfa !important;
-    vertical-align: middle;
-}
-
-#gallery .gallery-grid a {
-    height: auto !important;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-}
-
-#gallery .gallery-grid img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important;
-    display: block;
+.gallery {
     background: #f8fcfa;
+    padding: 60px 20px;
+}
+
+.gallery-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Gallery Container using Flexbox */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Image Card Wrapper - Set a professional uniform block size */
+.gallery-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(33.333% - 10px); /* Desktop: 3 Items per row */
+    height: 320px;               /* Fixed container height for alignment */
+    background: #ffffff;         /* Clean white card background to fill empty space */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Soft premium shadow */
+    text-decoration: none;
+    padding: 6px;                /* Padding to protect image borders */
+}
+
+/* Original Photo - Completely Protected, Not Cropped */
+.gallery-grid img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;         /* Prevents any cropping whatsoever */
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid a:hover img {
+    transform: scale(1.03);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+/* Tablet Screen (2 Items per row) */
+@media (max-width: 768px) {
+    .gallery-grid a {
+        width: calc(50% - 8px);
+        height: 280px;           /* Slightly shorter for smaller viewports */
+    }
+}
+
+/* Mobile Screen (2 Items per row for better readability) */
+@media (max-width: 480px) {
+    .gallery {
+        padding: 35px 12px;
+    }
+
+    .gallery-grid {
+        gap: 10px;
+    }
+
+    .gallery-grid a {
+        width: calc(50% - 5px);   /* Clean twin columns layout */
+        height: 190px;           /* Balanced look for phone screens */
+        padding: 4px;
+    }
+
+    .gallery-grid img {
+        border-radius: 4px;
+    }
 }
