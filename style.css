@@ -1870,3 +1870,34 @@ h2{
         height: 170px !important;
     }
 }
+
+/* Remove Gallery White Space */
+#gallery .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+#gallery .gallery-grid {
+    gap: 0 !important;
+    row-gap: 0 !important;
+    column-gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#gallery .gallery-grid a {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    line-height: 0 !important;
+}
+
+#gallery .gallery-grid img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    background:#f8fcfa !important;
+    vertical-align: middle;
+}
