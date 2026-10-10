@@ -1087,38 +1087,57 @@ p{
   GALLERY
 =========================================*/
 
-.gallery{
-    background:#f8fcfa;
+.gallery {
+    background: #f8fcfa;
 }
 
-.gallery-subtitle{
-    text-align:center;
-    color:#666;
-    margin-bottom:40px;
+.gallery-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
 }
 
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.gallery-grid a{
-    display:block;
-    overflow:hidden;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+.gallery-grid a {
+    display: block;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
 }
 
-.gallery-grid img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    transition:.45s;
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: .45s;
 }
 
-.gallery-grid img:hover{
-    transform:scale(1.08);
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid a {
+        height: 170px;
+    }
 }
 
 /*=========================================
@@ -1808,4 +1827,46 @@ h2{
 .appointment-btn {
     display: table;
     margin: 0 auto;
+}
+
+
+/* FINAL GALLERY FIX */
+#gallery .gallery-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#gallery .gallery-grid a {
+    display: block !important;
+    width: 100% !important;
+    height: 230px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    line-height: 0 !important;
+}
+
+#gallery .gallery-grid img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 600px) {
+    #gallery .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    #gallery .gallery-grid a {
+        height: 170px !important;
+    }
 }
