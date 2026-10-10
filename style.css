@@ -1901,3 +1901,17 @@ h2{
     background:#f8fcfa !important;
     vertical-align: middle;
 }
+
+#gallery .gallery-grid a {
+    height: auto !important;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+#gallery .gallery-grid img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block;
+    background: #f8fcfa;
+}
